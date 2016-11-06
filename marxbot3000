@@ -27,17 +27,9 @@ bad_starts = ["delete your ", "Please tag your ", "blocked. blocked. blocked. no
 idealists = ["liberals", "fascists", "reactionaries", "tankies", "primmies", "techies", "hoxhaists", "social democrats"]
 marxists = ["Engels", "Gramsci", "Luxemburg", "Althusser", "Foucault", "Zizek", "David Harvey", "Lukacs", "Bordiga", "Adorno"]
 
-nouns = []
-for item in good_nouns:
-	nouns.append(item)
-for item in bad_nouns:
-	nouns.append(item)
+nouns = good_nouns + bad_nouns
 
-the_nouns = []
-for item in the_good_nouns:
-	the_nouns.append(item)
-for item in the_bad_nouns:
-	the_nouns.append(item)
+the_nouns = the_good_nouns + the_bad_nouns
 
 def stole_fizzy(lst):
     return random.choice(lst) + " STOLE fizzy lifting drinks!!!"
@@ -88,25 +80,12 @@ def is_communist(x):
     new_list = ["liberal", "communist", "revisionism", "counter-revolutionary", "reactionary", "revolutionary", "proletarian", "bourgeois"]
     return random.choice(x) + " is " + random.choice(new_list)
 
-double_list = []
-for item in marxists:
-    double_list.append(item)
-for item in people:
-    double_list.append(item)
+double_list = marxists + people
 
 def say_fuck(x):
     return "Let " + random.choice(x) + " say fuck!!!"
 
-big_list = []
-
-for item in good_isms:
-    big_list.append(item)
-
-for item in bad_isms:
-    big_list.append(item)
-
-for item in nouns:
-    big_list.append(item)    
+big_list = good_isms + bad_isms + nouns
 
 def gotdamn_feet(x):
     return "he Boot Too Big For He Gotdamn " + random.choice(x)
@@ -114,15 +93,7 @@ def gotdamn_feet(x):
 def su(x):
     return "Garnet, Amethyst, and Pearl... and " + random.choice(x)
 
-mccree_list = []
-for item in marxists:
-	mccree_list.append(item)
-for item in idealists:
-	mccree_list.append(item)
-for item in bad_isms:
-	mccree_list.append(item)
-for item in good_isms:
-	mccree_list.append(item)
+mccree_list = marxists + idealists + bad_isms + good_isms
 
 def mccree(x):
 	return "*McCree voice*: It's high " + random.choice(x)
@@ -130,11 +101,7 @@ def mccree(x):
 def talking_heads(x, y):
 	return "This is not my beautiful " + random.choice(x) + "!!! This is not my beautiful " + random.choice(y) + "!!!"
 
-good_stuff = []
-for item in good_nouns:
-	good_stuff.append(item)
-for item in good_isms:
-	good_stuff.append(item)
+good_stuff = good_nouns + good_isms
 
 def cheap_tactic(x, y):
 	return random.choice(x) + " is just a cheap tactic to make weak " + random.choice(y) + " stronger"
